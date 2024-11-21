@@ -39,7 +39,7 @@ To use the YOUNG JWST calibration pipeline, simply modify the config.yaml file a
     - You have previously executed the pipeline up to and including stage 2. It is then safe to start the pipeline at the wisp_correction step since this step has not been executed previously.
 
 Finally, to run the pipeline, simply use the following command:
-- $ ./young_wrapper.sh
+- $ ./young_pipeline.sh
 
 Once the pipeline execution begins, a new directory will be created (./output) which will contain the output from all stages of the pipeline. Additionally, a log file (pipeline.log) will be created to keep track of the detailed output from the pipeline.
 
