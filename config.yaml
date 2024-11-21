@@ -1,0 +1,56 @@
+## Basic setup ##
+#-----------------------
+# CRDS settings
+crds_path: "/path/to/crds_cache"
+crds_server_url: "https://jwst-crds.stsci.edu"
+
+uncal_path: "/path/to/uncal_directory" # Uncalibrated directory path
+target: "XLSSC112" # Target of observation (for naming purposes)
+#-----------------------
+
+## Stage 1 settings
+#-----------------------
+ramp_fit_cores: "1" # Currently (as of 24.11.21) it is necessary to get the development version of the stcal repo (> pip install git+https://github.com/spacetelescope/stcal).
+                    # However, we strongly advice against this because there is a visual artifact associated with using multiprocessing for the ramp_fitting step.
+jump_cores: "half"
+#-----------------------
+
+## Stage 2 settings ##
+#-----------------------
+skip_resample: "true"
+#-----------------------
+
+## Wisp subtraction settings
+#-----------------------
+wisp_nproc: 32
+plot_sky: false
+#-----------------------
+
+## Stage 3 settings ##
+#-----------------------
+# Resample settings
+pixel_scale: 0.02
+pixfrac: 0.75
+rotation: 0.0
+
+# Tweakreg settings
+external_reference: false
+reference_path: ""
+starfinder: "dao"
+tweakreg_snr: 7.0
+#-----------------------
+
+## Steps to skip ##
+#-----------------------
+skip_steps: [] # Default to an empty list to avoid null error. Uncomment steps below to skip them.
+skip_steps:
+  # - download_uncal_references
+  # - stage1
+  # - fnoise_correction
+  # - download_rate_references
+  # - stage2
+  # - wisp_subtraction
+  # - background_subtraction
+  # - download_cal_references
+  # - stage3
+#-----------------------
