@@ -11,7 +11,8 @@ target: "TargetName" # Target of observation (for naming purposes)
 ## Stage 1 settings
 #-----------------------
 ramp_fit_cores: "1" # Currently (as of 24.11.21) it is necessary to get the development version of the stcal repo (> pip install git+https://github.com/spacetelescope/stcal).
-                    # However, we strongly advice against this because there is a visual artifact associated with using multiprocessing for the ramp_fitting step.
+                    # to use more than a single core. However, we strongly advice against this because there is currently a visual artifact associated with using >1 cores 
+                    # for the ramp_fitting step.
 jump_cores: "half"
 #-----------------------
 
