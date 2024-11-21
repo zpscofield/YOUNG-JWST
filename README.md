@@ -25,10 +25,10 @@ proper alignment.
 
 ## Installation and Requirements
 
-Installation instructions can be found on the [*JWST calibration pipeline*][https://jwst-pipeline.readthedocs.io/en/latest/] site, along with other information regarding the default 
-pipeline. It is also necessary to have the command-line YAML processor [*yq*][https://pypi.org/project/yq/] installed. 
+Installation instructions can be found on the [*JWST calibration pipeline*](https://jwst-pipeline.readthedocs.io/en/latest/) site, along with other information regarding the default 
+pipeline. It is also necessary to have the command-line YAML processor [*yq*](https://pypi.org/project/yq/) installed. 
 
-The wisp templates necessary for the wisp correction step can be found [*here*][https://stsci.app.box.com/s/1bymvf1lkrqbdn9rnkluzqk30e8o2bne/folder/275049066832?page=2], and are the version 3 templates provided in the [*JWST documentation*][https://jwst-docs.stsci.edu/known-issues-with-jwst-data/nircam-known-issues/nircam-scattered-light-artifacts#gsc.tab=0].
+The wisp templates necessary for the wisp correction step can be found [*here*](https://stsci.app.box.com/s/1bymvf1lkrqbdn9rnkluzqk30e8o2bne/folder/275049066832?page=2), and are the version 3 templates provided in the [*JWST documentation*](https://jwst-docs.stsci.edu/known-issues-with-jwst-data/nircam-known-issues/nircam-scattered-light-artifacts#gsc.tab=0). These templates (FITS files) should be placed in the provided wisp-template folder within the ./utils directory.
 
 It is strongly encouraged to have a large directory available when running this JWST pipeline implementation, given that the intermediate files are saved.
 
