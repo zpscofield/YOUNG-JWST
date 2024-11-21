@@ -17,9 +17,6 @@ from multiprocessing import Pool, cpu_count
 from tqdm.auto import tqdm
 import argparse
 
-# Load configuration from JSON file
-# with open('../config.json', 'r') as config_file:
-#     config = json.load(config_file)
 with open('config.yaml', 'r') as config_file:
     config = yaml.safe_load(config_file)
 
@@ -27,7 +24,7 @@ with open('config.yaml', 'r') as config_file:
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 
-log_file_path = 'pipeline.log'  # Specify your log file path here
+log_file_path = 'pipeline.log' 
 
 with open(log_file_path, 'a') as log_file:
     log_file.write("\n----------------------\n")
@@ -39,13 +36,12 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_handler.setFormatter(formatter)
 log.addHandler(file_handler)
 
-# Redirect stpipe logs
 stpipe_log = logging.getLogger("stpipe")
-stpipe_log.setLevel(logging.INFO)  # Adjust level as needed
+stpipe_log.setLevel(logging.INFO)
 stpipe_handler = logging.FileHandler(log_file_path, mode='a')
 stpipe_handler.setFormatter(formatter)
 stpipe_log.addHandler(stpipe_handler)
-for handler in stpipe_log.handlers:  # Remove stdout handlers
+for handler in stpipe_log.handlers: 
     if isinstance(handler, logging.StreamHandler):
         stpipe_log.removeHandler(handler)
 

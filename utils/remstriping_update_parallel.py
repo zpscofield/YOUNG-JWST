@@ -49,23 +49,21 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 file_handler.setFormatter(formatter)
 log.addHandler(file_handler)
 
-# Redirect CRDS logs
 crds_log = logging.getLogger("CRDS")
-crds_log.setLevel(logging.INFO)  # Adjust level as needed
+crds_log.setLevel(logging.INFO)
 crds_handler = logging.FileHandler(log_file_path, mode='a')
 crds_handler.setFormatter(formatter)
 crds_log.addHandler(crds_handler)
-for handler in crds_log.handlers:  # Remove stdout handlers
+for handler in crds_log.handlers: 
     if isinstance(handler, logging.StreamHandler):
         crds_log.removeHandler(handler)
 
-# Redirect stpipe logs
 stpipe_log = logging.getLogger("stpipe")
-stpipe_log.setLevel(logging.INFO)  # Adjust level as needed
+stpipe_log.setLevel(logging.INFO) 
 stpipe_handler = logging.FileHandler(log_file_path, mode='a')
 stpipe_handler.setFormatter(formatter)
 stpipe_log.addHandler(stpipe_handler)
-for handler in stpipe_log.handlers:  # Remove stdout handlers
+for handler in stpipe_log.handlers:
     if isinstance(handler, logging.StreamHandler):
         stpipe_log.removeHandler(handler)
         
@@ -363,7 +361,6 @@ def main():
     parser.add_argument('image', nargs='?', type=str, help='Filename of rate image for pattern subtraction (required if --runone is not used)')
     parser.add_argument('--apply_flat', dest='apply_flat', action=argparse.BooleanOptionalAction, required=False, default=True)
     parser.add_argument('--mask_sources', dest='mask_sources', action=argparse.BooleanOptionalAction, required=False, default=True)
-    #parser.add_argument('--save_patterns', dest='save_patterns', action=argparse.BooleanOptionalAction, default=False, help="Specify whether to save the horizontal and vertical striping patterns as FITS files.")
     args = parser.parse_args()
 
     if args.runone:
