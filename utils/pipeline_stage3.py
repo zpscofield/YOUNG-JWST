@@ -106,7 +106,6 @@ def create_custom_association(filter_dir, output_filename, program, target, inst
                 "asn_candidate": "(custom, observation)"
             })
 
-    # Construct the detailed association structure
     association = {
         "asn_type": "image3",
         "asn_rule": "candidate_Asn_Lv3Image",
@@ -120,7 +119,7 @@ def create_custom_association(filter_dir, output_filename, program, target, inst
                        f"DMSAttrConstraint('{{'name': 'opt_elem2', 'sources': ['pupil'], 'value': '{pupil}'}})\n"
                        f"DMSAttrConstraint('{{'name': 'subarray', 'sources': ['subarray'], 'value': '{subarray}'}})\n"
                        f"Constraint_Image('{{'name': 'exp_type', 'sources': ['exp_type'], 'value': '{exp_type}'}})",
-        "asn_id": filter + "_asn",  # Use a custom ID since combining different observations
+        "asn_id": filter + "_asn",  
         "target": target,
         "asn_pool": filter + "_pool",
         "products": [
