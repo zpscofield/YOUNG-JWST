@@ -5,7 +5,7 @@ crds_path: "/path/to/crds_cache"
 crds_server_url: "https://jwst-crds.stsci.edu"
 
 uncal_path: "/path/to/uncal_directory" # Uncalibrated directory path
-target: "XLSSC112" # Target of observation (for naming purposes)
+target: "TargetName" # Target of observation (for naming purposes)
 #-----------------------
 
 ## Stage 1 settings
