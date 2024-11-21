@@ -1,4 +1,4 @@
-# Yonsei Observable UNiverse Group (YOUNG) JWST calibration Pipeline
+# Yonsei Observable UNiverse Group (YOUNG) JWST Calibration Pipeline
 
 A streamlined implementation of the James Webb Space Telescope (JWST) calibration pipeline with additions to improve both the final mosaic image quality and to
 simplify the execution of the various stages of the pipeline.
