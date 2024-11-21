@@ -28,9 +28,6 @@ import crds
 from multiprocessing import Pool, cpu_count
 from tqdm.auto import tqdm
 
-# Load configuration from JSON file
-# with open('../config.json', 'r') as config_file:
-#     config = json.load(config_file)
 with open('config.yaml', 'r') as config_file:
     config = yaml.safe_load(config_file)
 
