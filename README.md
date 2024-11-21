@@ -42,5 +42,3 @@ Finally, to run the pipeline, simply use the following command:
 - $ ./young_pipeline.sh
 
 Once the pipeline execution begins, a new directory will be created (./output) which will contain the output from all stages of the pipeline. Additionally, a log file (pipeline.log) will be created to keep track of the detailed output from the pipeline.
-
-This pipeline is currently intended to be run starting with uncalibrated data files and finishing with mosaic images. If there is a problem and you need to re-run the pipeline starting at a certain stage, you should modify the young_pipeline.sh file and comment out which stages will be skipped.
