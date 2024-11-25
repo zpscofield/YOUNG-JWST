@@ -10,10 +10,10 @@ simplify the execution of the various stages of the pipeline.
     unnecessary to use the default associations from the pipeline.
 - Executes stages 1, 2, and 3 of the default JWST calibration pipeline, with added calibration steps throughout. These calibration steps include:
     - 1/f noise correction (Modified version of Micaela Bagley's "remstriping" algorithm)
-    - Wisp correction (Modified version of Ben Sunnquist's wisp correction algorithm provided in the JWST documentation (version 3).)
+    - Wisp correction (Modified version of Ben Sunnquist's wisp correction algorithm provided in the JWST documentation (version 3))
     - Background subtraction (Modified version of Henry C. Ferguson's background subtraction)
         - The modifications of these calibration steps mostly involve efficiency improvements or changes to help with integration into the YOUNG JWST Pipeline.
-        - The modified 1/f noise correction algorithm is much more significantly modified to handle bright, extended sources and perform better in cluster fields. In general, 
+        - The modified 1/f noise correction algorithm is more significantly modified to handle bright, extended sources and perform better in cluster fields. In general, 
         it does this by using full-row 1/f noise estimates when the amplifier estimate is unreasonably high. Additionally, this algorithm was updated to incorporate multiprocessing.
         - The original 1/f noise correction and background subtraction codes are courtesy of the [*CEERS team*](https://github.com/ceers/ceers-nircam).
 - Organizes calibrated exposures based on filter and uses the source catalog from the longest wavelength filter as the astrometric calibration catalog for other filters to ensure
