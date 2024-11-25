@@ -15,6 +15,7 @@ simplify the execution of the various stages of the pipeline.
         - The modifications of these calibration steps mostly involve efficiency improvements or changes to help with integration into the YOUNG JWST Pipeline.
         - The modified 1/f noise correction algorithm is much more significantly modified to handle bright, extended sources and perform better in cluster fields. In general, 
         it does this by using full-row 1/f noise estimates when the amplifier estimate is unreasonably high. Additionally, this algorithm was updated to incorporate multiprocessing.
+        - The original 1/f noise correction and background subtraction codes are courtesy of the [*CEERS team*](https://github.com/ceers/ceers-nircam).
 - Organizes calibrated exposures based on filter and uses the source catalog from the longest wavelength filter as the astrometric calibration catalog for other filters to ensure
 proper alignment.
     - The longest wavelength filter can also be matched to an external catalog provided by the user, and if no external catalog is provided then the initial absolute astrometric
