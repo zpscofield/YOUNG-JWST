@@ -61,14 +61,14 @@ from tqdm.auto import tqdm
 log = logging.getLogger(__name__)
 log.setLevel(logging.DEBUG)
 
-log_file_path = 'pipeline.log'  # Specify your log file path here
+log_file_path = 'pipeline.log'
 
 with open(log_file_path, 'a') as log_file:
     log_file.write("\n----------------\n")
     log_file.write("Wisp subtraction\n")
     log_file.write("----------------\n\n")
 
-file_handler = logging.FileHandler(log_file_path, mode='a')  # 'a' for append mode, 'w' for write mode
+file_handler = logging.FileHandler(log_file_path, mode='a')
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 file_handler.setFormatter(formatter)
 log.addHandler(file_handler)
